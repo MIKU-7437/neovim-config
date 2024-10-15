@@ -11,13 +11,18 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("miku.plugins")
--- require("lazy").setup({{ import = "slydragonn.plugins"}, { import = "slydragonn.plugins.lsp"}}, {
---     checker = {
---         enabled = true,
---         notify = false,
---     },
---     change_detection = {
---         notify = false,
---     },
--- })
+require("lazy").setup({
+    -- Общие плагины
+    { import = "miku.plugins" },
+
+    -- Python/Jupyter плагины
+    { import = "miku.plugins.python" },
+}, {
+    checker = {
+        enabled = true,
+        notify = false, -- Отключить уведомления об обновлениях
+    },
+    change_detection = {
+        notify = false, -- Отключить уведомления при изменении конфигурации
+    },
+})
