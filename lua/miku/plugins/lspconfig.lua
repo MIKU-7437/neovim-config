@@ -32,8 +32,8 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["tsserver"] = function()
-				nvim_lsp["tsserver"].setup({
+			["tsp-server"] = function()
+				nvim_lsp["tsp-server"].setup({
 					on_attach = on_attach,
 					capabilities = capabilities,
 				})
