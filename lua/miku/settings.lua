@@ -24,3 +24,4 @@ o.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for.
 -- o.splitright = true
 -- o.splitbelow = true -- When on, splitting a window will put the new window below the current one
 -- o.termguicolors = true
+vim.opt.shell = '/usr/bin/zsh'
