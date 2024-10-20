@@ -7,7 +7,7 @@ return {
         "MunifTanjim/nui.nvim",
     },
     config = function()
-        require 'nvim-web-devicons'.setup {
+        require('nvim-web-devicons').setup {
             -- your personnal icons can go here (to override)
             -- you can specify color or cterm_color instead of specifying both of them
             -- DevIcon will be appended to `name`
@@ -64,6 +64,14 @@ return {
         }
 
         require("neo-tree").setup({
+            window = {
+                mappings = {
+                    ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false } }, -- Плавающее окно
+                    ["L"] = "focus_preview",
+                    ["<C-b>"] = { "scroll_preview", config = { direction = 10 } },
+                    ["<C-f>"] = { "scroll_preview", config = { direction = -10 } },
+                }
+            },
             default_component_configs = {
                 icon = { folder_empty = "󰉖", default = "" },
                 modified = { symbol = "" },
