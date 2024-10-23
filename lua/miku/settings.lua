@@ -1,27 +1,59 @@
-local global = vim.g
+-- Alias for global options and vim options
 local o = vim.opt
 
+-- Tabs and indentation settings
+o.tabstop = 4        -- Number of spaces that a <Tab> counts for
+o.softtabstop = 4    -- Number of spaces a <Tab> inserts in insert mode
+o.shiftwidth = 4     -- Number of spaces for each step of (auto)indent
+o.expandtab = true   -- Convert tabs to spaces
+o.smartindent = true -- Smart indentation based on syntax
+
+-- Text formatting
+o.wrap = false -- Disable line wrapping
+
+-- Search settings
+o.hlsearch = false -- Disable highlighting of search matches
+o.incsearch = true -- Enable incremental search (highlight matches as you type)
+
+-- UI settings
+o.termguicolors = true -- Enable 24-bit RGB colors
+o.scrolloff = 8        -- Keep 8 lines visible above and below the cursor
+o.signcolumn = "yes"   -- Always show the sign column (used for LSP, git signs, etc.)
+
+-- File handling and cursor behavior
+o.isfname:append("@-@") -- Allow "@" in file names
+
+-- Column indicator
+o.colorcolumn = "80" -- Highlight column at 80 characters for line length limit
+
+-- Performance
+o.updatetime = 100 -- Reduce update time for better responsiveness (default is 4000ms)
+
 -- Editor options
-o.number = true -- Print the line number in front of each line
-o.relativenumber = true -- Show the line number relative to the line with the cursor in front of each line.
-o.clipboard = "unnamedplus" -- uses the clipboard register for all operations except yank.
-o.syntax = "on" -- When this option is set, the syntax with this name is loaded.
--- o.autoindent = true -- Copy indent from current line when starting a new line.
--- o.cursorline = true -- Highlight the screen line of the cursor with CursorLine.
-o.expandtab = true -- In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
-o.shiftwidth = 4 -- Number of spaces to use for each step of (auto)indent.
-o.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for.
--- o.encoding = "UTF-8" -- Sets the character encoding used inside Vim.
--- o.ruler = true -- Show the line and column number of the cursor position, separated by a comma.
--- o.mouse = "a" -- Enable the use of the mouse. "a" you can use on all modes
--- o.title = true -- When on, the title of the window will be set to the value of 'titlestring'
--- o.hidden = true -- When on a buffer becomes hidden when it is |abandon|ed
--- o.ttimeoutlen = 0 -- The time in milliseconds that is waited for a key code or mapped key sequence to complete.
--- o.wildmenu = true -- When 'wildmenu' is on, command-line completion operates in an enhanced mode.
--- o.showcmd = true -- Show (partial) command in the last line of the screen. Set this option off if your terminal is slow.
--- o.showmatch = true -- When a bracket is inserted, briefly jump to the matching one.
--- o.inccommand = "split" -- When nonempty, shows the effects of :substitute, :smagic, :snomagic and user commands with the :command-preview flag as you type.
--- o.splitright = true
--- o.splitbelow = true -- When on, splitting a window will put the new window below the current one
--- o.termguicolors = true
+o.number = true             -- Show absolute line numbers
+o.relativenumber = true     -- Show relative line numbers for easier navigation
+o.clipboard = "unnamedplus" -- Use system clipboard for all operations except yank
+o.syntax = "on"             -- Enable syntax highlighting
+-- o.autoindent = true       -- (Optional) Copy indent from current line when starting a new line
+o.cursorline = true         -- (Optional) Highlight the line where the cursor is located
+o.expandtab = true          -- Convert tabs to spaces (redundant but left for clarity)
+o.shiftwidth = 4            -- Number of spaces for each step of (auto)indent (repeated)
+o.tabstop = 4               -- Number of spaces that a <Tab> counts for (repeated)
+
+-- Optional settings (commented out)
+-- o.encoding = "UTF-8"     -- Set file encoding to UTF-8
+-- o.ruler = true           -- Show cursor position in the status line
+-- o.mouse = "a"            -- Enable mouse in all modes
+-- o.title = true           -- Set terminal title to window title
+-- o.hidden = true          -- Keep buffers hidden when abandoned
+-- o.ttimeoutlen = 0        -- Timeout for key sequences in milliseconds
+-- o.wildmenu = true        -- Enhanced command-line completion
+-- o.showcmd = true         -- Show command being typed in the status line
+-- o.showmatch = true       -- Highlight matching parentheses or brackets
+-- o.inccommand = "split"   -- Show preview of search and replace results in a split
+-- o.splitright = true      -- Open new vertical splits to the right of the current window
+-- o.splitbelow = true      -- Open new horizontal splits below the current window
+-- o.termguicolors = true   -- 24-bit color support (repeated)
+
+-- Set default shell to zsh
 vim.opt.shell = '/usr/bin/zsh'
