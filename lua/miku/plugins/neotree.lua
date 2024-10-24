@@ -119,6 +119,12 @@ return {
 
         -- Клавиша для открытия/закрытия Neo-tree
         vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal toggle<CR>', {})
-        vim.keymap.set("n", "<leader>r", "<CMD>Neotree focus<CR>", {})
+        vim.keymap.set('n', '<C-r>', function()
+            if vim.bo.filetype == "neo-tree" then
+                vim.cmd.wincmd("p")
+            else
+                vim.cmd.Neotree("focus")
+            end
+        end, { desc = "Toggle Explorer Focus" })
     end
 }

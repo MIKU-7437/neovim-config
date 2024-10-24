@@ -45,10 +45,6 @@ map("i", "jk", "<ESC>")
 map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
 map("n", "<leader>r", "<CMD>Neotree focus<CR>")
 
--- Window management
-map("n", "<leader>o", "<CMD>vsplit<CR>")
-map("n", "<leader>p", "<CMD>split<CR>")
-
 -- Resize Windows
 map("n", "<C-Left>", "<C-w><")
 map("n", "<C-Right>", "<C-w>>")
