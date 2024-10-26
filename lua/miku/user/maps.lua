@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 
 local function map(mode, lhs, rhs)
-    vim.keymap.set(mode, lhs, rhs, { silent = true })
+    local lm = package.loaded['langmapper'] and require('langmapper').map or vim.keymap.set
+    lm(mode, lhs, rhs, { silent = true })
 end
 
 -- Navigation and cursor movement
@@ -42,8 +43,8 @@ map("n", "<leader>q", "<CMD>q<CR>")
 map("i", "jk", "<ESC>")
 
 -- NeoTree (lua.miku.plugins.neotree) file explorer
-map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
-map("n", "<leader>r", "<CMD>Neotree focus<CR>")
+-- map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
+-- map("n", "<leader>r", "<CMD>Neotree focus<CR>")
 
 -- Window management
 map("n", "<leader>o", "<CMD>vsplit<CR>")
