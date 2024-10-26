@@ -170,7 +170,6 @@ return {
                     end
                 },
             })
-            --
             -- -- Клавиша для открытия/закрытия Neo-tree
             local map = require('langmapper').map
             map('n', '<leader>n', ':Neotree filesystem reveal toggle<CR>', {})
