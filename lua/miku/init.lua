@@ -1,3 +1,3 @@
 require("miku.user.settings")
-require("miku.user.maps")
 require("miku.user.lazy")
+require("miku.user.maps")

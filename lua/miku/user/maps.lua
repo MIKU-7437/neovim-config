@@ -1,10 +1,4 @@
-vim.g.mapleader = " "
-
-local function map(mode, lhs, rhs)
-    local lm = package.loaded['langmapper'] and require('langmapper').map or vim.keymap.set
-    lm(mode, lhs, rhs, { silent = true })
-end
-
+local map = require("langmapper").map
 -- Navigation and cursor movement
 map('n', 'J', [[m'Jz]])      -- Join lines without moving cursor
 map('n', '<C-d>', '<C-d>zz') -- Scroll down and center cursor

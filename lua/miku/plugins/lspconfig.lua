@@ -81,7 +81,7 @@ return {
                 })
             end,
 
-            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+            require("langmapper").map("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
         })
     end,

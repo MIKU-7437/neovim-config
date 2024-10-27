@@ -24,7 +24,7 @@ return {
             },
         })
 
-        vim.keymap.set({ "n", "v", }, "<leader>f", function()
+        require("langmapper").map({ "n", "v", }, "<leader>f", function()
             conform.format({
                 lsp_fallback = true,
                 async = false,
