@@ -1,6 +1,9 @@
 return {
     "Wansmer/langmapper.nvim",
+    priority = 1000,
     config = function()
+        _G.map = require("langmapper").map
+
         local function escape(str)
             local escape_chars = [[;,."|\]]
             return vim.fn.escape(str, escape_chars)

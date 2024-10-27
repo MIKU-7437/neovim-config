@@ -49,7 +49,7 @@ return {
         },
         config = function()
             require("neo-tree").setup({
-                close_if_last_window = false,
+                close_if_last_window = true,
                 window = {
                     mappings = {
                         ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false } }, -- Плавающее окно
@@ -171,7 +171,6 @@ return {
                 },
             })
             -- -- Клавиша для открытия/закрытия Neo-tree
-            local map = require('langmapper').map
             map('n', '<leader>n', ':Neotree filesystem reveal toggle<CR>', {})
             map('n', '<leader>e', function()
                 if vim.bo.filetype == "neo-tree" then

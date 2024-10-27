@@ -81,7 +81,7 @@ return {
                 })
             end,
 
-            require("langmapper").map("n", "<leader>ca", vim.lsp.buf.code_action, {})
+            map("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
         })
     end,

@@ -1,4 +1,3 @@
-local map = require("langmapper").map
 -- Navigation and cursor movement
 map('n', 'J', [[m'Jz]])      -- Join lines without moving cursor
 map('n', '<C-d>', '<C-d>zz') -- Scroll down and center cursor

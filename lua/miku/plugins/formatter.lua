@@ -24,7 +24,7 @@ return {
             },
         })
 
-        require("langmapper").map({ "n", "v", }, "<leader>f", function()
+        map({ "n", "v", }, "<leader>f", function()
             conform.format({
                 lsp_fallback = true,
                 async = false,

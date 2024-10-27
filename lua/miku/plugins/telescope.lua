@@ -16,7 +16,6 @@ return {
             })
 
 
-            local map = require("langmapper").map
             map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
             map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep search in cwd" }) -- Поиск строк
             map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find open buffers" })         -- Поиск по открытым буферам
