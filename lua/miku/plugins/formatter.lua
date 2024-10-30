@@ -4,7 +4,7 @@ return {
     config = function()
         local conform = require("conform")
         conform.setup({
-            fotmatters_by_ft = {
+            formatters_by_ft = {
                 javascript = { "prettier" },
                 typescript = { "prettier" },
                 javascriptreact = { "prettier" },
@@ -15,7 +15,7 @@ return {
                 yaml = { "prettier" },
                 markdown = { "prettier" },
                 lua = { "stylua" },
-                python = { "isort", "blasck" },
+                python = { "isort", "black" },
             },
             format_on_save = {
                 lsp_fallback = true,
@@ -30,6 +30,6 @@ return {
                 async = false,
                 timeout_ms = 1000,
             })
-        end, { desc = "Fotmat file or range (in visual mode)", })
+        end, { desc = "Fotmat file or range (in visual mode)" })
     end
 }
