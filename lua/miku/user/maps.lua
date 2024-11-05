@@ -1,12 +1,12 @@
 -- Navigation and cursor movement
-map('n', 'J', [[m'Jz]])      -- Join lines without moving cursor
-map('n', '<C-d>', '<C-d>zz') -- Scroll down and center cursor
-map('n', '<C-u>', '<C-u>zz') -- Scroll up and center cursor
-map('n', 'n', 'nzzzv')       -- Move to next search result and center cursor
-map('n', 'N', 'Nzzzv')       -- Move to prev search result and center cursor
+map("n", "J", [[m'Jz]])      -- Join lines without moving cursor
+map("n", "<C-d>", "<C-d>zz") -- Scroll down and center cursor
+map("n", "<C-u>", "<C-u>zz") -- Scroll up and center cursor
+map("n", "n", "nzzzv")       -- Move to next search result and center cursor
+map("n", "N", "Nzzzv")       -- Move to prev search result and center cursor
 
 -- Clipboard and deletion behavior
-map('x', '<leader>p', [['_dP]])         -- Paste over selections without yanking it
+map("x", "<leader>p", [['_dP]])         -- Paste over selections without yanking it
 map({ "n", "v" }, "<leader>y", [["+y]]) -- Yank to system clipboard
 map("n", "<leader>Y", [["+Y]])          -- Yank entire line to system clipboard
 map({ "n", "v" }, "<leader>d", [["_d]]) -- Delete without yanking it
@@ -26,7 +26,7 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) --
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>") -- Make file executable
 
 -- Reload and sace configuration
-map('n', '<leader><leader>', ':source $MYVIMRC<CR>') -- Reload current config
+map("n", "<leader><leader>", ":source $MYVIMRC<CR>") -- Reload current config
 map("n", "<leader>w", "<CMD>update<CR>")             -- Save current file
 
 -- Quit command
@@ -48,3 +48,6 @@ map("n", "<C-Left>", "<C-w><")
 map("n", "<C-Right>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
+
+-- TODO: try out pastetoggle
+-- vim.opt.pastetoggle = "<F3>"
