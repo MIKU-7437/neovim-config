@@ -48,3 +48,6 @@ map("n", "<C-Left>", "<C-w><")
 map("n", "<C-Right>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
+
+-- TODO: try out pastetoggle
+-- vim.opt.pastetoggle = "<F3>"
